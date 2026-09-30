@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Turbo Racing X</title>
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- START SCREEN -->
+
+<div id="startScreen" class="center-box">
+
+  <h1>🚗 TURBO RACING X</h1>
+
+  <h2>Select Difficulty</h2>
+
+  <select id="difficulty">
+
+    <option value="easy">Easy</option>
+
+    <option value="medium" selected>
+      Medium
+    </option>
+
+    <option value="hard">Hard</option>
+
+  </select>
+
+  <br><br>
+
+  <button onclick="startGame()">
+    ▶ Start Race
+  </button>
+
+</div>
+
+<!-- GAME UI -->
+
+<div id="gameUI" style="display:none;">
+
+  <!-- TOP BAR -->
+
+  <div class="race-topbar">
+
+    <div id="score">
+      Score: 0
+    </div>
+
+    <div id="lives">
+      ❤️❤️❤️
+    </div>
+
+    <div id="ammo">
+      Ammo: 10
+    </div>
+
+    <div id="fuel">
+      Fuel: 100%
+    </div>
+
+    <div id="speed">
+      Speed: 0
+    </div>
+
+  </div>
+
+  <!-- CANVAS -->
+
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- MOBILE CONTROLS -->
+
+  <div class="race-controls">
+
+    <button onclick="moveLeft()">
+      ⬅
+    </button>
+
+    <button onclick="shoot()">
+      🔫
+    </button>
+
+    <button onclick="nitroBoost()">
+      ⚡
+    </button>
+
+    <button onclick="moveRight()">
+      ➡
+    </button>
+
+  </div>
+
+  <!-- GAME BUTTONS -->
+
+  <div class="game-buttons">
+
+    <button onclick="pauseGame()">
+      ⏸ Pause
+    </button>
+
+    <button onclick="resumeGame()">
+      ▶ Resume
+    </button>
+
+    <button onclick="restartGame()">
+      🔄 Restart
+    </button>
+
+    <button onclick="window.location.href='index.html'">
+      🏠 Home
+    </button>
+
+  </div>
+
+</div>
+
+<script src="js/main.js"></script>
+
+<script src="js/car.js"></script>
+
+</body>
+</html>
